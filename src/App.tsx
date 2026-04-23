@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index.tsx";
 import Collections from "./pages/Collections";
 import Designers from "./pages/Designers";
+import DesignerDetail from "./pages/DesignerDetail";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/collections" element={<Collections />} />
             <Route path="/designers" element={<Designers />} />
+            <Route path="/designers/:id" element={<DesignerDetail />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
