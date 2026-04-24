@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { collections, designers } from "@/data/marketplace";
+import { products, designers } from "@/data/marketplace";
 import ProductCard from "@/components/ProductCard";
 
 const Shop = () => {

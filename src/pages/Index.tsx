@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero.jpg";
-import { collections, designers } from "@/data/marketplace";
+import { products, designers } from "@/data/marketplace";
 import ProductCard from "@/components/ProductCard";
 
 const Index = () => {
-  const featured = collections.slice(0, 3);
+  const featured = products.slice(0, 3);
 
   return (
     <>
