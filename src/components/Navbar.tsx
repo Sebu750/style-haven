@@ -14,6 +14,7 @@ const Navbar = () => {
           <div className="flex-1 hidden md:flex items-center gap-8">
             <NavLink to="/" end className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Home</NavLink>
             <NavLink to="/collections" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Collections</NavLink>
+            <NavLink to="/shop" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Shop</NavLink>
             <NavLink to="/designers" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Designers</NavLink>
             <NavLink to="/journal" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Journal</NavLink>
           </div>
@@ -32,6 +33,7 @@ const Navbar = () => {
         <nav className="md:hidden border-t border-border/60 flex justify-center gap-8 py-3">
           <NavLink to="/" end className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Home</NavLink>
           <NavLink to="/collections" className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Collections</NavLink>
+          <NavLink to="/shop" className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Shop</NavLink>
           <NavLink to="/designers" className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Designers</NavLink>
           <NavLink to="/journal" className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Journal</NavLink>
         </nav>
