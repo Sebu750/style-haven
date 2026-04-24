@@ -126,7 +126,7 @@ const SearchOverlay = ({ open, onClose }: Props) => {
 
         {q && collectionHits.length > 0 && (
           <section className="py-12 pb-24">
-            <p className="eyebrow mb-8">Pieces · {collectionHits.length}</p>
+            <p className="eyebrow mb-8">Products · {collectionHits.length}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
               {collectionHits.map((c) => (
                 <Link

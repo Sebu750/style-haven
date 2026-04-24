@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { collections, designers } from "@/data/marketplace";
+import { products, designers } from "@/data/marketplace";
 import ProductCard from "@/components/ProductCard";
 
 const Shop = () => {
@@ -11,7 +11,7 @@ const Shop = () => {
     return list
       .map((name) => ({
         designer: designers.find((d) => d.name === name)!,
-        items: collections.filter((c) => c.designer === name),
+        items: products.filter((c) => c.designer === name),
       }))
       .filter((g) => g.items.length > 0);
   }, [active, designerNames]);
