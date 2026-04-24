@@ -20,24 +20,156 @@ import prev1 from "@/assets/prev-1.jpg";
 import prev2 from "@/assets/prev-2.jpg";
 import prev3 from "@/assets/prev-3.jpg";
 
-export type Collection = {
+/**
+ * PRODUCT — a single, standalone item for sale.
+ * Focus: specifications (material, size, price) and individual utility.
+ */
+export type Product = {
   id: string;
   name: string;
   category: string;
   designer: string;
+  collectionId: string; // which themed Collection this product belongs to
+  season: string;
   price: number;
   image: string;
-  season: string;
+  material: string;
+  sizes: string[];
 };
 
-export const collections: Collection[] = [
-  { id: "c1", name: "Shahbano Ivory Bridal Lehenga", category: "Bridal", designer: "Mehrunissa Khan", price: 4890, image: collection1, season: "SS25" },
-  { id: "c2", name: "Qirmizi Banarsi Dupatta", category: "Bridal", designer: "Mehrunissa Khan", price: 1290, image: collection2, season: "SS25" },
-  { id: "c3", name: "Charcoal Embroidered Sherwani", category: "Menswear", designer: "Hamza Sheheryar", price: 2150, image: collection3, season: "FW24" },
-  { id: "c4", name: "Ivory Raw Silk Sherwani", category: "Menswear", designer: "Hamza Sheheryar", price: 1980, image: collection4, season: "FW24" },
-  { id: "c5", name: "Indigo Block-Print Kurta Set", category: "Pret", designer: "Sanam Maskatiya", price: 540, image: collection5, season: "SS25" },
-  { id: "c6", name: "Terracotta Handloom Shalwar Kameez", category: "Pret", designer: "Sanam Maskatiya", price: 690, image: collection6, season: "SS25" },
+export const products: Product[] = [
+  {
+    id: "p1",
+    name: "Shahbano Ivory Bridal Lehenga",
+    category: "Bridal",
+    designer: "Mehrunissa Khan",
+    collectionId: "col-shahbano",
+    season: "SS25",
+    price: 4890,
+    image: collection1,
+    material: "Hand-loomed silk, antique zardozi, kora & pearl",
+    sizes: ["XS", "S", "M", "L"],
+  },
+  {
+    id: "p2",
+    name: "Qirmizi Banarsi Dupatta",
+    category: "Bridal",
+    designer: "Mehrunissa Khan",
+    collectionId: "col-shahbano",
+    season: "SS25",
+    price: 1290,
+    image: collection2,
+    material: "Pure Banarsi silk, gota border",
+    sizes: ["One Size"],
+  },
+  {
+    id: "p3",
+    name: "Charcoal Embroidered Sherwani",
+    category: "Menswear",
+    designer: "Hamza Sheheryar",
+    collectionId: "col-sukoon",
+    season: "FW24",
+    price: 2150,
+    image: collection3,
+    material: "Raw silk, jamewar lining, hand-finished interior",
+    sizes: ["38", "40", "42", "44"],
+  },
+  {
+    id: "p4",
+    name: "Ivory Raw Silk Sherwani",
+    category: "Menswear",
+    designer: "Hamza Sheheryar",
+    collectionId: "col-sukoon",
+    season: "FW24",
+    price: 1980,
+    image: collection4,
+    material: "Aged raw silk, mother-of-pearl buttons",
+    sizes: ["38", "40", "42", "44"],
+  },
+  {
+    id: "p5",
+    name: "Indigo Block-Print Kurta Set",
+    category: "Pret",
+    designer: "Sanam Maskatiya",
+    collectionId: "col-mitti",
+    season: "SS25",
+    price: 540,
+    image: collection5,
+    material: "Khaddi cotton, natural indigo, hand block-print",
+    sizes: ["XS", "S", "M", "L", "XL"],
+  },
+  {
+    id: "p6",
+    name: "Terracotta Handloom Shalwar Kameez",
+    category: "Pret",
+    designer: "Sanam Maskatiya",
+    collectionId: "col-mitti",
+    season: "SS25",
+    price: 690,
+    image: collection6,
+    material: "Multani handloom, madder-root dye",
+    sizes: ["XS", "S", "M", "L", "XL"],
+  },
 ];
+
+/**
+ * COLLECTION — a curated, themed group of Products launched together.
+ * Focus: storytelling, color story, seasonal concept.
+ */
+export type Collection = {
+  id: string;
+  name: string;
+  designer: string;
+  designerId: string;
+  season: string;
+  theme: string; // one-line color/concept story
+  statement: string;
+  cover: string;
+  productIds: string[];
+};
+
+export const themedCollections: Collection[] = [
+  {
+    id: "col-shahbano",
+    name: "Shahbano",
+    designer: "Mehrunissa Khan",
+    designerId: "d1",
+    season: "Bridal SS 2025",
+    theme: "Ivory · Gold · Crimson",
+    statement:
+      "A Mughal reverie of ivory, gold and crimson — heirloom lehengas built on hand-loomed silk and finished with antique zardozi.",
+    cover: collection1,
+    productIds: ["p1", "p2"],
+  },
+  {
+    id: "col-sukoon",
+    name: "Sukoon",
+    designer: "Hamza Sheheryar",
+    designerId: "d2",
+    season: "Menswear FW 2024",
+    theme: "Charcoal · Ivory · Jade",
+    statement:
+      "Quiet tailoring for the modern Pakistani groom — soft shoulders, restrained palettes, hand-finished interiors.",
+    cover: collection3,
+    productIds: ["p3", "p4"],
+  },
+  {
+    id: "col-mitti",
+    name: "Mitti",
+    designer: "Sanam Maskatiya",
+    designerId: "d3",
+    season: "Pret SS 2025",
+    theme: "Indigo · Terracotta · Undyed",
+    statement:
+      "Undyed khaddi, indigo block-print and terracotta handloom — pieces designed to soften with every wash.",
+    cover: collection5,
+    productIds: ["p5", "p6"],
+  },
+];
+
+// Backward-compat alias: existing pages import `collections` expecting product-shaped items.
+// Keep this so Index/Shop/Search overlays continue to render product cards.
+export const collections: Product[] = products;
 
 export type SocialLink = { label: string; href: string };
 export type PreviousCollection = {
@@ -68,7 +200,6 @@ export type Designer = {
   previousCollections: PreviousCollection[];
 };
 
-// Helper to fill a 14-slot moodboard with 3 cohesive images (cycled in a pleasing pattern)
 const cycle = (a: string, b: string, c: string): string[] => [
   a, b, c, a, b, c, a, c, b, a, c, b, a, b,
 ];
