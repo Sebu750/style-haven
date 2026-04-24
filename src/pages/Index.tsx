@@ -98,10 +98,10 @@ const Index = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {[
-            { label: "Bridal", caption: "Heirloom couture", image: collections[0].image },
-            { label: "Festive", caption: "Eid & celebrations", image: collections[1].image },
-            { label: "Menswear", caption: "Sherwanis & formals", image: collections[2].image },
-            { label: "Everyday Pret", caption: "Quiet daily wear", image: collections[4].image },
+            { label: "Bridal", caption: "Heirloom couture", image: products[0].image },
+            { label: "Festive", caption: "Eid & celebrations", image: products[1].image },
+            { label: "Menswear", caption: "Sherwanis & formals", image: products[2].image },
+            { label: "Everyday Pret", caption: "Quiet daily wear", image: products[4].image },
           ].map((o) => (
             <Link key={o.label} to="/collections" className="group block">
               <div className="relative aspect-[3/4] overflow-hidden bg-muted mb-4">
@@ -169,7 +169,7 @@ const Index = () => {
           <Link to="/journal" className="btn-luxe">Read the Journal</Link>
         </div>
         <div className="aspect-[4/5] overflow-hidden bg-muted">
-          <img src={collections[3].image} alt="Editorial story" loading="lazy" className="w-full h-full object-cover" />
+          <img src={products[3].image} alt="Editorial story" loading="lazy" className="w-full h-full object-cover" />
         </div>
       </section>
 
