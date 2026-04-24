@@ -7,20 +7,15 @@ import collection6 from "@/assets/collection-6.jpg";
 import designer1 from "@/assets/designer-1.jpg";
 import designer2 from "@/assets/designer-2.jpg";
 import designer3 from "@/assets/designer-3.jpg";
-import mood1 from "@/assets/mood-1.jpg";
-import mood2 from "@/assets/mood-2.jpg";
-import mood3 from "@/assets/mood-3.jpg";
-import mood4 from "@/assets/mood-4.jpg";
-import mood5 from "@/assets/mood-5.jpg";
-import mood6 from "@/assets/mood-6.jpg";
-import mood7 from "@/assets/mood-7.jpg";
-import mood8 from "@/assets/mood-8.jpg";
-import mood9 from "@/assets/mood-9.jpg";
-import mood10 from "@/assets/mood-10.jpg";
-import mood11 from "@/assets/mood-11.jpg";
-import mood12 from "@/assets/mood-12.jpg";
-import mood13 from "@/assets/mood-13.jpg";
-import mood14 from "@/assets/mood-14.jpg";
+import moodZs1 from "@/assets/mood-zs-1.jpg";
+import moodZs2 from "@/assets/mood-zs-2.jpg";
+import moodZs3 from "@/assets/mood-zs-3.jpg";
+import moodHsy1 from "@/assets/mood-hsy-1.jpg";
+import moodHsy2 from "@/assets/mood-hsy-2.jpg";
+import moodHsy3 from "@/assets/mood-hsy-3.jpg";
+import moodSm1 from "@/assets/mood-sm-1.jpg";
+import moodSm2 from "@/assets/mood-sm-2.jpg";
+import moodSm3 from "@/assets/mood-sm-3.jpg";
 import prev1 from "@/assets/prev-1.jpg";
 import prev2 from "@/assets/prev-2.jpg";
 import prev3 from "@/assets/prev-3.jpg";
@@ -36,12 +31,12 @@ export type Collection = {
 };
 
 export const collections: Collection[] = [
-  { id: "c1", name: "Soie Aurora Gown", category: "Evening", designer: "Isolde Moreau", price: 2890, image: collection1, season: "SS25" },
-  { id: "c2", name: "Camel Tailored Coat", category: "Outerwear", designer: "Silas Vance", price: 1750, image: collection2, season: "FW24" },
-  { id: "c3", name: "Marbré Leather Tote", category: "Accessories", designer: "Elara Chen", price: 1290, image: collection3, season: "SS25" },
-  { id: "c4", name: "Ivory Cashmere Knit", category: "Knitwear", designer: "Elara Chen", price: 690, image: collection4, season: "FW24" },
-  { id: "c5", name: "Noir Silhouette Dress", category: "Evening", designer: "Isolde Moreau", price: 2150, image: collection5, season: "SS25" },
-  { id: "c6", name: "Heritage Leather Boots", category: "Footwear", designer: "Silas Vance", price: 1180, image: collection6, season: "FW24" },
+  { id: "c1", name: "Shahbano Ivory Bridal Lehenga", category: "Bridal", designer: "Mehrunissa Khan", price: 4890, image: collection1, season: "SS25" },
+  { id: "c2", name: "Qirmizi Banarsi Dupatta", category: "Bridal", designer: "Mehrunissa Khan", price: 1290, image: collection2, season: "SS25" },
+  { id: "c3", name: "Charcoal Embroidered Sherwani", category: "Menswear", designer: "Hamza Sheheryar", price: 2150, image: collection3, season: "FW24" },
+  { id: "c4", name: "Ivory Raw Silk Sherwani", category: "Menswear", designer: "Hamza Sheheryar", price: 1980, image: collection4, season: "FW24" },
+  { id: "c5", name: "Indigo Block-Print Kurta Set", category: "Pret", designer: "Sanam Maskatiya", price: 540, image: collection5, season: "SS25" },
+  { id: "c6", name: "Terracotta Handloom Shalwar Kameez", category: "Pret", designer: "Sanam Maskatiya", price: 690, image: collection6, season: "SS25" },
 ];
 
 export type SocialLink = { label: string; href: string };
@@ -73,104 +68,100 @@ export type Designer = {
   previousCollections: PreviousCollection[];
 };
 
+// Helper to fill a 14-slot moodboard with 3 cohesive images (cycled in a pleasing pattern)
+const cycle = (a: string, b: string, c: string): string[] => [
+  a, b, c, a, b, c, a, c, b, a, c, b, a, b,
+];
+
 export const designers: Designer[] = [
   {
     id: "d1",
-    name: "Isolde Moreau",
-    title: "Haute Couture",
-    city: "Paris, France",
-    bio: "Trained at the ateliers of the Place Vendôme, Isolde crafts gowns that carry the weight of memory and the lightness of breath.",
+    name: "Mehrunissa Khan",
+    title: "Bridal Couture",
+    city: "Lahore, Pakistan",
+    bio: "Trained in the karkhanas of Anarkali, Mehrunissa builds Mughal-inspired bridals where every motif is hand-embroidered in zardozi, kora and pearl.",
     image: designer1,
-    pieces: 24,
+    pieces: 28,
     about:
-      "Isolde Moreau founded her eponymous house in 2018 after a decade spent inside the petites mains workrooms of Paris. Her practice is rooted in the slow rituals of couture — hand-rolled hems, silk threads dyed in small batches, garments built to be worn across decades rather than seasons. Each piece begins as a graphite sketch and ends in the hands of a single seamstress who signs the inner seam.",
-    university: "École de la Chambre Syndicale de la Couture Parisienne",
-    graduationYear: 2012,
+      "Mehrunissa Khan launched her atelier in the Walled City of Lahore in 2017, after a decade apprenticing under the master karigars of Liberty and Anarkali. Her practice is rooted in the slow rituals of Mughal craft — zardozi worked on wooden adda frames, gota dyed in small dyebaths, and silk khaddi sourced directly from Multan weavers. Each bridal takes between four and seven months to complete and carries the signature of the karigar who finished its final stitch.",
+    university: "Pakistan Institute of Fashion & Design (PIFD), Lahore",
+    graduationYear: 2011,
     socials: [
       { label: "Instagram", href: "https://instagram.com" },
       { label: "Pinterest", href: "https://pinterest.com" },
-      { label: "Journal", href: "#" },
+      { label: "Atelier", href: "#" },
     ],
     latestCollection: {
-      name: "Lumière Tendre",
-      season: "Spring / Summer 2025",
+      name: "Shahbano",
+      season: "Bridal Spring / Summer 2025",
       statement:
-        "A study in morning light — translucent silks, hand-pleated organza and the quiet architecture of a body at rest.",
-      moodboard: [
-        mood1, mood2, mood3, mood4, mood5, mood6, mood7,
-        mood8, mood9, mood10, mood11, mood12, mood13, mood14,
-      ],
+        "A Mughal reverie of ivory, gold and crimson — heirloom lehengas built on hand-loomed silk and finished with antique zardozi.",
+      moodboard: cycle(moodZs1, moodZs2, moodZs3),
     },
     previousCollections: [
-      { id: "p1", name: "Nocturne", season: "FW 2024", image: prev1 },
-      { id: "p2", name: "Méridien", season: "Resort 2024", image: prev2 },
-      { id: "p3", name: "Première Aube", season: "SS 2023", image: prev3 },
+      { id: "p1", name: "Noor Mahal", season: "Bridal FW 2024", image: prev1 },
+      { id: "p2", name: "Anarkali", season: "Festive 2024", image: prev2 },
+      { id: "p3", name: "Mehrgarh", season: "Bridal SS 2023", image: prev3 },
     ],
   },
   {
     id: "d2",
-    name: "Silas Vance",
-    title: "Tailoring & Menswear",
-    city: "Milan, Italy",
-    bio: "A second-generation tailor reinterpreting Italian sartorialism through deconstructed lines and modern proportion.",
+    name: "Hamza Sheheryar",
+    title: "Menswear & Sherwanis",
+    city: "Karachi, Pakistan",
+    bio: "A second-generation tailor reimagining the sherwani for a quieter, more architectural Pakistan — soft shoulders, restrained palettes, hand-finished interiors.",
     image: designer2,
-    pieces: 32,
+    pieces: 36,
     about:
-      "Born above his father's tailoring shop in Brera, Silas Vance grew up among bolts of wool and chalk-marked muslin. His collections strip the Milanese suit down to its skeletal essentials — soft shoulders, raw inner construction, fabrics chosen for the way they age rather than the way they photograph.",
-    university: "Politecnico di Milano — Fashion Design",
-    graduationYear: 2014,
+      "Born above his father's tailoring shop in Saddar, Hamza Sheheryar grew up among bolts of raw silk and chalk-marked muslin. His house, founded in 2016, strips the Pakistani sherwani down to its essentials — soft shoulders, raw inner construction, jamewar linings, and embroidery placed with the discretion of a signature. He works almost exclusively with karigars from Hyderabad and ages every fabric for six months before cutting.",
+    university: "Indus Valley School of Art and Architecture, Karachi",
+    graduationYear: 2013,
     socials: [
       { label: "Instagram", href: "https://instagram.com" },
-      { label: "Are.na", href: "https://are.na" },
+      { label: "Behance", href: "https://behance.net" },
       { label: "Atelier", href: "#" },
     ],
     latestCollection: {
-      name: "Sotto Voce",
-      season: "Fall / Winter 2024",
+      name: "Sukoon",
+      season: "Menswear Fall / Winter 2024",
       statement:
-        "Quiet tailoring for the modern flâneur — camel, ink and bone, cut close to the body and worn with ease.",
-      moodboard: [
-        mood2, mood11, mood4, mood6, mood14, mood1, mood12,
-        mood3, mood7, mood10, mood13, mood5, mood9, mood8,
-      ],
+        "Quiet tailoring for the modern Pakistani groom — charcoal, ivory and jade, cut close to the body and worn without ornament.",
+      moodboard: cycle(moodHsy1, moodHsy2, moodHsy3),
     },
     previousCollections: [
-      { id: "p1", name: "Brera", season: "SS 2024", image: prev2 },
-      { id: "p2", name: "Notturno", season: "FW 2023", image: prev1 },
-      { id: "p3", name: "Giardino", season: "Resort 2023", image: prev3 },
+      { id: "p1", name: "Saddar", season: "Menswear SS 2024", image: prev2 },
+      { id: "p2", name: "Shab", season: "Menswear FW 2023", image: prev1 },
+      { id: "p3", name: "Bagh", season: "Festive 2023", image: prev3 },
     ],
   },
   {
     id: "d3",
-    name: "Elara Chen",
-    title: "Sustainable Luxury",
-    city: "Copenhagen, Denmark",
-    bio: "A pioneer of regenerative materials, Elara designs pieces meant to outlive the seasons that conceived them.",
+    name: "Sanam Maskatiya",
+    title: "Sustainable Pret",
+    city: "Islamabad, Pakistan",
+    bio: "A pioneer of regenerative khaddi and indigenous block-print, Sanam designs daily-wear pieces meant to soften, fade and be passed on.",
     image: designer3,
-    pieces: 18,
+    pieces: 22,
     about:
-      "Elara Chen builds garments the way one might build a house — for permanence. Working from a studio overlooking Copenhagen's harbour, she partners with regenerative farms across Scandinavia to source linen, hemp and undyed wool. Every piece is logged, traceable, and offered with a lifetime mending service.",
-    university: "Royal Danish Academy — Design",
-    graduationYear: 2016,
+      "Sanam Maskatiya builds garments the way one might build a house — for permanence. Working from a studio in the foothills of the Margallas, she partners with khaddi weavers in Multan, ajrak block-printers in Bhit Shah and natural dyers in Hala. Every kurta is logged, traceable, and offered with a lifetime mending service. Her commitment is to the slow disappearance of synthetic dyes from Pakistani pret.",
+    university: "National College of Arts (NCA), Lahore",
+    graduationYear: 2015,
     socials: [
       { label: "Instagram", href: "https://instagram.com" },
       { label: "Substack", href: "https://substack.com" },
       { label: "Studio", href: "#" },
     ],
     latestCollection: {
-      name: "Terre Vivante",
-      season: "Spring / Summer 2025",
+      name: "Mitti",
+      season: "Pret Spring / Summer 2025",
       statement:
-        "Undyed linens, vegetable-tanned leathers and pieces designed to soften, fade and be passed on.",
-      moodboard: [
-        mood4, mood14, mood7, mood1, mood12, mood6, mood10,
-        mood3, mood5, mood9, mood2, mood13, mood11, mood8,
-      ],
+        "Undyed khaddi, indigo block-print and terracotta handloom — pieces designed to soften with every wash and outlast the season that made them.",
+      moodboard: cycle(moodSm1, moodSm2, moodSm3),
     },
     previousCollections: [
-      { id: "p1", name: "Hav", season: "FW 2024", image: prev2 },
-      { id: "p2", name: "Jord", season: "SS 2024", image: prev3 },
-      { id: "p3", name: "Skog", season: "FW 2023", image: prev1 },
+      { id: "p1", name: "Sindh", season: "Pret FW 2024", image: prev2 },
+      { id: "p2", name: "Hala", season: "Pret SS 2024", image: prev3 },
+      { id: "p3", name: "Margalla", season: "Pret FW 2023", image: prev1 },
     ],
   },
 ];
