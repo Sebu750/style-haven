@@ -1,6 +1,6 @@
-import { Collection } from "@/data/marketplace";
+import { Product } from "@/data/marketplace";
 
-const ProductCard = ({ item }: { item: Collection }) => {
+const ProductCard = ({ item }: { item: Product }) => {
   return (
     <article className="group cursor-pointer">
       <div className="relative aspect-[4/5] overflow-hidden bg-secondary mb-5">

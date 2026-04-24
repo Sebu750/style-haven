@@ -1,15 +1,18 @@
 import { useMemo, useState } from "react";
-import { collections } from "@/data/marketplace";
+import { Link } from "react-router-dom";
+import { themedCollections, products } from "@/data/marketplace";
 import ProductCard from "@/components/ProductCard";
 
-const categories = ["All", "Evening", "Outerwear", "Knitwear", "Accessories", "Footwear"];
+const categories = ["All", "Bridal", "Menswear", "Pret"];
 
 const Collections = () => {
   const [active, setActive] = useState("All");
-  const items = useMemo(
-    () => (active === "All" ? collections : collections.filter((c) => c.category === active)),
-    [active]
-  );
+  const filteredCollections = useMemo(() => {
+    if (active === "All") return themedCollections;
+    return themedCollections.filter((col) =>
+      col.productIds.some((pid) => products.find((p) => p.id === pid)?.category === active)
+    );
+  }, [active]);
 
   return (
     <>
