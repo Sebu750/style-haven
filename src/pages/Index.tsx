@@ -100,7 +100,7 @@ const Index = () => {
           <p className="text-muted-foreground leading-relaxed mb-8 max-w-md">
             From bespoke fittings in Milanese workrooms to the slow craft of Japanese indigo dyeing, our editorial follows the makers who shape the seasons.
           </p>
-          <a href="#" className="btn-luxe">Read the Journal</a>
+          <Link to="/journal" className="btn-luxe">Read the Journal</Link>
         </div>
         <div className="aspect-[4/5] overflow-hidden bg-muted">
           <img src={collections[3].image} alt="Editorial story" loading="lazy" className="w-full h-full object-cover" />

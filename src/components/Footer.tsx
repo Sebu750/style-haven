@@ -13,8 +13,8 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li><a className="link-underline" href="/collections">Collections</a></li>
             <li><a className="link-underline" href="/designers">Designers</a></li>
-            <li><a className="link-underline" href="#">Editorial</a></li>
-            <li><a className="link-underline" href="#">Atelier Stories</a></li>
+            <li><a className="link-underline" href="/journal">Journal</a></li>
+            <li><a className="link-underline" href="/journal">Atelier Stories</a></li>
           </ul>
         </div>
         <div>

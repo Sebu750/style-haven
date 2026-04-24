@@ -15,6 +15,7 @@ const Navbar = () => {
             <NavLink to="/" end className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Home</NavLink>
             <NavLink to="/collections" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Collections</NavLink>
             <NavLink to="/designers" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Designers</NavLink>
+            <NavLink to="/journal" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Journal</NavLink>
           </div>
           <Link to="/" className="font-display text-2xl md:text-3xl tracking-[0.3em] flex-1 text-center">
             AURELIA
@@ -32,6 +33,7 @@ const Navbar = () => {
           <NavLink to="/" end className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Home</NavLink>
           <NavLink to="/collections" className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Collections</NavLink>
           <NavLink to="/designers" className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Designers</NavLink>
+          <NavLink to="/journal" className="text-xs uppercase tracking-[0.2em]" activeClassName="text-foreground">Journal</NavLink>
         </nav>
       </header>
       <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
