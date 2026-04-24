@@ -17,7 +17,13 @@ const ProductCard = ({ item }: { item: Product }) => {
       <div className="space-y-1">
         <p className="eyebrow">{item.designer}</p>
         <h3 className="font-display text-xl">{item.name}</h3>
-        <p className="text-sm text-muted-foreground">€ {item.price.toLocaleString()}</p>
+        <p className="text-xs text-muted-foreground italic line-clamp-1">{item.material}</p>
+        <div className="flex items-center justify-between pt-1">
+          <p className="text-sm">€ {item.price.toLocaleString()}</p>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+            {item.sizes.length > 1 ? `${item.sizes[0]}–${item.sizes[item.sizes.length - 1]}` : item.sizes[0]}
+          </p>
+        </div>
       </div>
     </article>
   );
