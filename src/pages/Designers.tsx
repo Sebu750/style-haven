@@ -13,7 +13,7 @@ const Designers = () => {
         <p className="eyebrow mb-5">The Maison</p>
         <h1 className="font-display text-5xl md:text-7xl mb-6">Designers</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Independent ateliers from Paris, Milan, Copenhagen and beyond — chosen for their devotion to craft and the integrity of their making.
+          Independent ateliers from Lahore, Karachi and Islamabad — chosen for their devotion to Pakistani craft and the integrity of their making.
         </p>
       </section>
 
