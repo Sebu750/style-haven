@@ -3,6 +3,7 @@ import heroImg from "@/assets/hero.jpg";
 import { products, designers } from "@/data/marketplace";
 import ProductCard from "@/components/ProductCard";
 
+
 const Index = () => {
   const featured = products.slice(0, 3);
 
@@ -12,7 +13,7 @@ const Index = () => {
       <section className="relative h-[88vh] min-h-[640px] w-full overflow-hidden">
         <img
           src={heroImg}
-          alt="Aurelia Spring Summer 2025 hero — model in flowing silk gown"
+          alt="Adorzia Spring Summer 2025 hero — model in flowing silk gown"
           width={1600}
           height={1024}
           className="absolute inset-0 w-full h-full object-cover"
@@ -41,7 +42,7 @@ const Index = () => {
       <section className="container-luxe py-24 md:py-32 text-center">
         <p className="eyebrow mb-8">A Maison of Makers</p>
         <h2 className="font-display text-3xl md:text-5xl max-w-3xl mx-auto leading-tight">
-          Aurelia exists for the considered wardrobe — pieces conceived in small ateliers and chosen with intention.
+          Adorzia exists for the considered wardrobe — pieces conceived in small ateliers and chosen with intention.
         </h2>
       </section>
 
@@ -126,7 +127,7 @@ const Index = () => {
       <section className="bg-secondary/50 py-24 md:py-32">
         <div className="container-luxe">
           <div className="text-center mb-16">
-            <p className="eyebrow mb-3">The Aurelia Promise</p>
+            <p className="eyebrow mb-3">The Adorzia Promise</p>
             <h2 className="font-display text-4xl md:text-5xl max-w-2xl mx-auto leading-tight">
               Considered at every stitch.
             </h2>

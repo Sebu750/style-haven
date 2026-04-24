@@ -19,7 +19,7 @@ const Navbar = () => {
             <NavLink to="/journal" className="link-underline text-sm tracking-wide" activeClassName="text-foreground">Journal</NavLink>
           </div>
           <Link to="/" className="font-display text-2xl md:text-3xl tracking-[0.3em] flex-1 text-center">
-            AURELIA
+            Adorzia
           </Link>
           <div className="flex-1 flex items-center justify-end gap-5 text-foreground/80">
             <button aria-label="Search" onClick={() => setSearchOpen(true)} className="hover:text-accent transition-colors"><Search className="h-[18px] w-[18px]" strokeWidth={1.25} /></button>

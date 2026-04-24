@@ -4,9 +4,9 @@ import collection3 from "@/assets/collection-3.jpg";
 import collection4 from "@/assets/collection-4.jpg";
 import collection5 from "@/assets/collection-5.jpg";
 import collection6 from "@/assets/collection-6.jpg";
-import designer1 from "@/assets/designer-1.jpg";
-import designer2 from "@/assets/designer-2.jpg";
-import designer3 from "@/assets/designer-3.jpg";
+import designer1 from "@/assets/designer-1.png";
+import designer2 from "@/assets/designer-2.png";
+import designer3 from "@/assets/desginers-3.png";
 import moodZs1 from "@/assets/mood-zs-1.jpg";
 import moodZs2 from "@/assets/mood-zs-2.jpg";
 import moodZs3 from "@/assets/mood-zs-3.jpg";
@@ -40,27 +40,27 @@ export type Product = {
 export const products: Product[] = [
   {
     id: "p1",
-    name: "Shahbano Ivory Bridal Lehenga",
-    category: "Bridal",
+    name: "Structural Sheesh-Mahal Silk Shirt",
+    category: "Luxury Ready-to-Wear",
     designer: "Mehrunissa Khan",
-    collectionId: "col-shahbano",
-    season: "SS25",
-    price: 4890,
+    collectionId: "col-sheeshmahal",
+    season: "SS26",
+    price: 1290,
     image: collection1,
-    material: "Hand-loomed silk, antique zardozi, kora & pearl",
-    sizes: ["XS", "S", "M", "L"],
+    material: "Carbon black silk, gunmetal mirror work, hand-encased silk thread",
+    sizes: ["XS", "S", "M", "L", "XL"],
   },
   {
-    id: "p2",
-    name: "Qirmizi Banarsi Dupatta",
-    category: "Bridal",
+    id: "p1",
+    name: "Structural Sheesh-Mahal Silk Shirt",
+    category: "Luxury Ready-to-Wear",
     designer: "Mehrunissa Khan",
-    collectionId: "col-shahbano",
-    season: "SS25",
+    collectionId: "col-sheeshmahal",
+    season: "SS26",
     price: 1290,
     image: collection2,
-    material: "Pure Banarsi silk, gota border",
-    sizes: ["One Size"],
+    material: "Carbon black silk, gunmetal mirror work, hand-encased silk thread",
+    sizes: ["XS", "S", "M", "L", "XL"],
   },
   {
     id: "p3",
