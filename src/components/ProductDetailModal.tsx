@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+
 import { Product, designers, themedCollections } from "@/data/marketplace";
 import { useState, useEffect } from "react";
 
@@ -42,10 +42,8 @@ const ProductDetailModal = ({ product, open, onClose }: Props) => {
   return (
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
       <DialogContent className="max-w-6xl w-[95vw] p-0 gap-0 overflow-hidden max-h-[92vh] overflow-y-auto border-border">
-        <VisuallyHidden>
-          <DialogTitle>{product.name}</DialogTitle>
-          <DialogDescription>{product.material}</DialogDescription>
-        </VisuallyHidden>
+        <DialogTitle className="sr-only">{product.name}</DialogTitle>
+        <DialogDescription className="sr-only">{product.material}</DialogDescription>
 
         <div className="grid md:grid-cols-2">
           {/* Gallery */}
