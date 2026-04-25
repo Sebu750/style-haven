@@ -49,9 +49,11 @@ const Collections = () => {
                 <header className="grid md:grid-cols-12 gap-8 mb-12 items-end">
                   <div className="md:col-span-7">
                     <p className="eyebrow mb-3">{col.season} · {col.theme}</p>
-                    <h2 className="font-display text-4xl md:text-5xl leading-tight mb-3">
-                      {col.name}
-                    </h2>
+                    <Link to={`/collections/${col.id}`} className="inline-block group">
+                      <h2 className="font-display text-4xl md:text-5xl leading-tight mb-3 group-hover:text-accent transition-colors">
+                        {col.name}
+                      </h2>
+                    </Link>
                     <Link
                       to={`/designers/${col.designerId}`}
                       className="text-sm text-muted-foreground link-underline"
@@ -60,7 +62,13 @@ const Collections = () => {
                     </Link>
                   </div>
                   <div className="md:col-span-5">
-                    <p className="text-muted-foreground leading-relaxed">{col.statement}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{col.statement}</p>
+                    <Link
+                      to={`/collections/${col.id}`}
+                      className="text-xs uppercase tracking-[0.25em] link-underline"
+                    >
+                      View Collection
+                    </Link>
                   </div>
                 </header>
 
