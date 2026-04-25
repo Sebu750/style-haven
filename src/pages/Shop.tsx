@@ -1,10 +1,12 @@
 import { useMemo, useState } from "react";
-import { products, designers } from "@/data/marketplace";
+import { products, designers, Product } from "@/data/marketplace";
 import ProductCard from "@/components/ProductCard";
+import ProductDetailModal from "@/components/ProductDetailModal";
 
 const Shop = () => {
   const designerNames = useMemo(() => designers.map((d) => d.name), []);
   const [active, setActive] = useState<string>("All");
+  const [selected, setSelected] = useState<Product | null>(null);
 
   const grouped = useMemo(() => {
     const list = active === "All" ? designerNames : [active];
@@ -60,13 +62,26 @@ const Shop = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
                 {items.map((item) => (
-                  <ProductCard key={item.id} item={item} />
+                  <button
+                    key={item.id}
+                    onClick={() => setSelected(item)}
+                    className="text-left"
+                    aria-label={`View details for ${item.name}`}
+                  >
+                    <ProductCard item={item} />
+                  </button>
                 ))}
               </div>
             </div>
           ))}
         </div>
       </section>
+
+      <ProductDetailModal
+        product={selected}
+        open={!!selected}
+        onClose={() => setSelected(null)}
+      />
     </>
   );
 };
