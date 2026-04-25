@@ -71,19 +71,19 @@ const Index = () => {
             <p className="eyebrow mb-3">In Conversation With</p>
             <h2 className="font-display text-4xl md:text-5xl">Featured Designers</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-            {designers.map((d) => (
-              <Link key={d.id} to="/designers" className="group text-center">
-                <div className="aspect-[3/4] overflow-hidden mb-6 bg-muted">
+          <div dir="rtl" className="grid grid-cols-3 gap-6 sm:gap-12 md:gap-16 max-w-4xl mx-auto">
+            {designers.slice(0, 3).map((d) => (
+              <Link key={d.id} to={`/designers/${d.id}`} dir="ltr" className="group text-center">
+                <div className="aspect-square w-full overflow-hidden rounded-full mb-5 bg-muted ring-1 ring-border">
                   <img
                     src={d.image}
                     alt={`Portrait of ${d.name}`}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                    className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
                   />
                 </div>
                 <p className="eyebrow mb-2">{d.title}</p>
-                <h3 className="font-display text-2xl mb-1">{d.name}</h3>
+                <h3 className="font-display text-xl md:text-2xl mb-1">{d.name}</h3>
                 <p className="text-sm text-muted-foreground">{d.city}</p>
               </Link>
             ))}
