@@ -391,7 +391,7 @@ export const themedCollections: Collection[] = [
     statement:
       "A Mughal reverie of ivory, gold and crimson — heirloom lehengas built on hand-loomed silk and finished with antique zardozi.",
     cover: collection1,
-    productIds: ["p1", "p2"],
+    productIds: ["p1b", "p2", "p1c"],
   },
   {
     id: "col-sukoon",
@@ -403,7 +403,7 @@ export const themedCollections: Collection[] = [
     statement:
       "Quiet tailoring for the modern Pakistani groom — soft shoulders, restrained palettes, hand-finished interiors.",
     cover: collection3,
-    productIds: ["p3", "p4"],
+    productIds: ["p3", "p4", "p3b"],
   },
   {
     id: "col-mitti",
@@ -415,7 +415,67 @@ export const themedCollections: Collection[] = [
     statement:
       "Undyed khaddi, indigo block-print and terracotta handloom — pieces designed to soften with every wash.",
     cover: collection5,
-    productIds: ["p5", "p6"],
+    productIds: ["p5", "p6", "p5b"],
+  },
+  {
+    id: "col-haveli",
+    name: "Haveli",
+    designer: "Zara Shahjahan",
+    designerId: "d4",
+    season: "Couture SS 2025",
+    theme: "Fresco Pink · Lime · Gold",
+    statement:
+      "An archive of the Lahori haveli — fresco pinks, lime-washed ivory and the dusty gold of an afternoon courtyard.",
+    cover: collection1,
+    productIds: ["p7", "p8", "p9"],
+  },
+  {
+    id: "col-numaish",
+    name: "Numaish",
+    designer: "Ali Xeeshan",
+    designerId: "d5",
+    season: "Bridal FW 2024",
+    theme: "Saffron · Lapis · Oxblood",
+    statement:
+      "A theatrical bridal of saffron, lapis and oxblood — phulkari shawls and the maximal joy of a Pakistani wedding procession.",
+    cover: collection2,
+    productIds: ["p10", "p11", "p12"],
+  },
+  {
+    id: "col-khaaka",
+    name: "Khaaka",
+    designer: "Misha Lakhani",
+    designerId: "d6",
+    season: "Pret SS 2025",
+    theme: "Black · Dust · Ivory",
+    statement:
+      "A graphic pret of black, dust and ivory — square-cut kameez and the discipline of an unembellished line.",
+    cover: collection5,
+    productIds: ["p13", "p14", "p15"],
+  },
+  {
+    id: "col-rilli",
+    name: "Rilli",
+    designer: "Rizwan Beyg",
+    designerId: "d7",
+    season: "Couture FW 2024",
+    theme: "Madder · Indigo · Ochre",
+    statement:
+      "A revivalist meditation on Sindhi rilli — patchworked silks finished with pre-Partition gota and antique mirror.",
+    cover: collection6,
+    productIds: ["p16", "p17", "p18"],
+  },
+  {
+    id: "col-heer",
+    name: "Heer",
+    designer: "Fahad Hussayn",
+    designerId: "d8",
+    season: "Couture SS 2025",
+    theme: "Emerald · Vermillion · Bone",
+    statement:
+      "A retelling of the Punjabi epic Heer Ranjha — emerald, vermillion and bone, hand-painted on silk and embroidered in heavy resham.",
+    cover: collection3,
+    productIds: ["p19", "p20", "p21"],
   },
 ];
 
